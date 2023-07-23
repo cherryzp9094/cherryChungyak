@@ -1,0 +1,18 @@
+object Dependency {
+    const val CORE_KTX = "androidx.core:core-ktx:1.8.0"
+    const val KOTLIN_BOM = "org.jetbrains.kotlin:kotlin-bom:1.8.0"
+    const val LIFECYCLE_RUNTIME_KTX = "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
+    const val ACTIVITY_COMPOSE = "androidx.activity:activity-compose:1.5.1"
+    const val COMPOSE_BOM = "androidx.compose:compose-bom:2022.10.00"
+    const val UI = "androidx.compose.ui:ui"
+    const val UI_GRAPHICS = "androidx.compose.ui:ui-graphics"
+    const val UI_TOOLING_PREVIEW = "androidx.compose.ui:ui-tooling-preview"
+    const val MATERIAL3 = "androidx.compose.material3:material3"
+    const val JUNIT = "junit:junit:4.13.2"
+    const val JUNIT_EXT = "androidx.test.ext:junit:1.1.5"
+    const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core:3.5.1"
+    const val TEXT_COMPOSE_BOM = "androidx.compose:compose-bom:2022.10.00"
+    const val UI_TEXT_JUNIT4 = "androidx.compose.ui:ui-test-junit4"
+    const val UI_TOOLING = "androidx.compose.ui:ui-tooling"
+    const val UI_TEST_MANIFEST = "androidx.compose.ui:ui-test-manifest"
+}
