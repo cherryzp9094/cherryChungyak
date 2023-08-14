@@ -1,5 +1,7 @@
 object Libs {
     const val ANDROIDX_CORE_KTX = "androidx.core:core-ktx"
+    const val ANDROIDX_APP_COMPAT = "androidx.appcompat:appcompat"
+    const val ANDROIDX_MATERIAL = "com.google.android.material:material"
     const val ANDROIDX_LIFECYCLE_RUNTIME_KTX = "androidx.lifecycle:lifecycle-runtime-ktx"
     const val ANDROIDX_ACTIVITY_COMPOSE = "androidx.activity:activity-compose"
     const val ANDROIDX_MATERIAL3 = "androidx.compose.material3:material3"
@@ -17,4 +19,19 @@ object Libs {
     const val JETBRAINS_KOTLIN_BOM = "org.jetbrains.kotlin:kotlin-bom"
 
     const val JUNIT = "junit:junit"
+
+    const val OK_HTTP3_BOM = "com.squareup.okhttp3:okhttp-bom"
+    const val OK_HTTP3 = "com.squareup.okhttp3:okhttp"
+    const val OK_HTTP3_LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor"
+
+    const val RETROFIT2 = "com.squareup.retrofit2:retrofit"
+    const val RETROFIT2_CONVERTER_GSON = "com.squareup.retrofit2:converter-gson"
+
+
+//    // define a BOM and its version
+//    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.10.0"))
+//
+//    // define any required OkHttp artifacts without version
+//    implementation("com.squareup.okhttp3:okhttp")
+//    implementation("com.squareup.okhttp3:logging-interceptor")
 }

@@ -1,5 +1,9 @@
+import org.gradle.kotlin.dsl.DependencyHandlerScope
+
 object AndroidX {
     const val CORE_KTX = "${Libs.ANDROIDX_CORE_KTX}:${Versions.coreKtx}"
+    const val APP_COMPAT = "${Libs.ANDROIDX_APP_COMPAT}:${Versions.appCompat}"
+    const val MATERIAL = "${Libs.ANDROIDX_MATERIAL}:${Versions.material}"
     const val LIFECYCLE_RUNTIME_KTX = "${Libs.ANDROIDX_LIFECYCLE_RUNTIME_KTX}:${Versions.lifecycleRuntimeKtx}"
     const val ACTIVITY_COMPOSE = "${Libs.ANDROIDX_ACTIVITY_COMPOSE}:${Versions.activityCompose}"
     const val MATERIAL3 = Libs.ANDROIDX_MATERIAL3
@@ -23,4 +27,13 @@ object Tests {
     const val ESPRESSO_CORE = "${Libs.ANDROIDX_TEST_ESPRESSO_CORE}:${Versions.testEspressoCore}"
     const val UI_TEST_JUNIT4 = Libs.ANDROIDX_COMPOSE_UI_TEST_JUNIT4
     const val UI_TEST_MANIFEST = Libs.ANDROIDX_UI_TEST_MANIFEST
+}
+
+object Libraries {
+    const val OK_HTTP3_BOM = "${Libs.OK_HTTP3_BOM}:${Versions.okHttpBom}"
+    const val OK_HTTP3 = Libs.OK_HTTP3
+    const val OK_HTTP3_LOGGING_INTERCEPTOR = Libs.OK_HTTP3_LOGGING_INTERCEPTOR
+
+    const val RETROFIT2 = "${Libs.RETROFIT2}:${Versions.retrofit2}"
+    const val RETROFIT2_CONVERTER_GSON = "${Libs.RETROFIT2_CONVERTER_GSON}:${Versions.retrofit2}"
 }

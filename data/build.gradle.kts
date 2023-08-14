@@ -35,10 +35,17 @@ android {
 dependencies {
     implementation(project(":domain"))
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation(AndroidX.CORE_KTX)
+    implementation(AndroidX.APP_COMPAT)
+    implementation(AndroidX.MATERIAL)
+    testImplementation(Tests.JUNIT)
+    androidTestImplementation(Tests.EXT_JUNIT)
+    androidTestImplementation(Tests.ESPRESSO_CORE)
+
+    implementation(platform(Libraries.OK_HTTP3_BOM))
+    implementation(Libraries.OK_HTTP3)
+    implementation(Libraries.OK_HTTP3_LOGGING_INTERCEPTOR)
+
+    implementation(Libraries.RETROFIT2)
+    implementation(Libraries.RETROFIT2_CONVERTER_GSON)
 }
