@@ -1,9 +1,29 @@
 package com.cherryzp.cherrychungyak.base
 
 import androidx.lifecycle.ViewModel
-import dagger.hilt.android.lifecycle.HiltViewModel
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.launch
 
-@HiltViewModel
-class BaseViewModel: ViewModel() {
+abstract class BaseViewModel<S : UiState<S>> : ViewModel(), ContainerHost<S> {
+
+    abstract val initialState: S
+    override val container: Container<S> by lazy {
+        RealContainer(initialState)
+    }
+
+    protected fun reduceState(uiState: (uiState: S) -> S) = event {
+        reduceState { uiState(it) }
+    }
+
+    protected fun <SEU> postSideEffect(
+        postFunc: suspend (state: S) -> SEU
+    ) = event {
+        viewModelScope.launch {
+            val sideEffectOrUnit = postFunc(state)
+            if (sideEffectOrUnit is UiSideEffect) {
+                postSideEffect(sideEffectOrUnit)
+            }
+        }
+    }
 
 }
