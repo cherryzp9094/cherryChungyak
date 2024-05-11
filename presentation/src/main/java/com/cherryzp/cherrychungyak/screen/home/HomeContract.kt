@@ -7,4 +7,6 @@ data class HomeUiState(
     val title: String
 ) : UiState<HomeUiState>
 
-sealed class HomeUiSideEffect : UiSideEffect
+sealed class HomeUiSideEffect : UiSideEffect {
+    data class ShowSnackBar(val message: String) : HomeUiSideEffect()
+}
