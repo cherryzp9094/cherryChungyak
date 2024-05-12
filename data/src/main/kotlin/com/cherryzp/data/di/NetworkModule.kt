@@ -37,6 +37,8 @@ object NetworkModule {
             val url = request.url.newBuilder()
                 .build()
             request = request.newBuilder()
+                .addHeader(name = "content-type", value = "application/json")
+                .addHeader(name = "charset", value = "UTF-8")
                 .url(url)
                 .build()
             var connectTimeout = chain.connectTimeoutMillis()
