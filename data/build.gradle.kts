@@ -4,6 +4,7 @@ plugins {
     id(libs.plugins.jetbrains.kotlin.android.get().pluginId)
     id(libs.plugins.kotlin.kapt.get().pluginId)
     id(libs.plugins.hilt.android.get().pluginId)
+    id(libs.plugins.secrets.get().pluginId)
 }
 
 android {
@@ -16,7 +17,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildFeatures {
+        buildConfig = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -33,6 +36,11 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+}
+
+
+secrets {
+    defaultPropertiesFileName = "secrets.defaults.properties"
 }
 
 dependencies {

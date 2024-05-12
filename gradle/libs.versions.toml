@@ -1,9 +1,9 @@
 [versions]
 #plugins
-android-application = "8.0.2"
+android-application = "8.1.2"
 kotlin-gradle-plugin = "1.8.22"
 jetbrains-kotlin-android = "1.8.10"
-
+secrets = "2.0.1"
 
 # androidx
 core-ktx = "1.8.0"
@@ -80,6 +80,8 @@ android-library = { id = "com.android.library", version.ref = "android-applicati
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "jetbrains-kotlin-android" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin-gradle-plugin" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt-android-gradle-plugin" }
+secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secrets" }
+
 
 [bundles]
 androidx = [
