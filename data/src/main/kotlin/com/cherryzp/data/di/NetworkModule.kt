@@ -21,6 +21,7 @@ private const val CONNECT_TIMEOUT = "CONNECT_TIMEOUT"
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+
     @Singleton
     @Provides
     fun provideHttpLoggingInterceptor() = HttpLoggingInterceptor().apply {
