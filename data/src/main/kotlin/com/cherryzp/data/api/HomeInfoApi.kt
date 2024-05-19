@@ -1,7 +1,7 @@
 package com.cherryzp.data.api
 
 import com.cherryzp.data.BuildConfig
-import com.cherryzp.data.model.HomeAptInfoDetail
+import com.cherryzp.data.model.HomeAptInfoDetailEntity
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -14,7 +14,7 @@ interface HomeInfoApi {
         @Query("page") page: Int,
         @Query("perPage") perPage: Int,
         @Query("serviceKey") serviceKey: String = SERVICE_KEY,
-    ): NetworkResponse<List<HomeAptInfoDetail>>
+    ): NetworkResponse<List<HomeAptInfoDetailEntity>>
 
 }
 

@@ -1,10 +1,10 @@
 package com.cherryzp.data.source
 
-import com.cherryzp.data.model.HomeAptInfoDetail
+import com.cherryzp.data.model.HomeAptInfoDetailEntity
 
 interface HomeInfoNetworkDataSource {
     suspend fun getHomeAptInfo(
         page: Int,
         perPage: Int,
-    ): List<HomeAptInfoDetail>
+    ): List<HomeAptInfoDetailEntity>
 }

@@ -1,4 +1,4 @@
-package com.cherryzp.data.model
+package com.cherryzp.domain.model
 
 /**
  * APT 분양정보 상세조회
